@@ -7,82 +7,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/style.css">
 
     <title>MODOS DE TELAS</title>
 </head>
 <body>
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;            
-        }
-        .modo-tela {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            height: 100vh;
-        }
-        .btns {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-        }
-        .btnEl {
-            padding: 10px 20px;
-            border-radius: 10px;
-            border: 1px solid #000;          
-        }
-        .darkMode {
-            background-color: #000;
-            color: #FFF;
-            transition: .3s ease-in-out;
-        }
-        .lightMode {
-            background-color: #fff;
-            color: #000;
-            transition: .3s ease-in-out;
-
-        }
-
-    </style>
-
     <main class="modo-tela">
         <h1>Modos de tela</h1>
-
         <div class="btns">
             <button id="dark" class="btnEl">Dark</button>
             <button id="light" class="btnEl">Light</button>
         </div>
     </main>
-
-
-
-
-
-    <script>
-
-        const tela = document.querySelector('.modo-tela');
-        const btnDark = document.querySelector('#dark');
-        const btnLight = document.querySelector('#light');
-        const bgBtn = document.querySelector('.btnEl')
-
-        btnDark.addEventListener('click', addDark);
-        btnLight.addEventListener('click', addLight)
-
-        function addDark() {
-            tela.classList.add('darkMode');
-            tela.classList.remove('lightMode');
-        }
-        function addLight() {
-            tela.classList.add('lightMode');
-            tela.classList.remove('darkMode');
-        }
-
-
-    </script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
