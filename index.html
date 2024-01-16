@@ -36,6 +36,17 @@
             border-radius: 10px;
             border: 1px solid #000;          
         }
+        .darkMode {
+            background-color: #000;
+            color: #FFF;
+            transition: .3s ease-in-out;
+        }
+        .lightMode {
+            background-color: #fff;
+            color: #000;
+            transition: .3s ease-in-out;
+
+        }
 
     </style>
 
@@ -44,7 +55,7 @@
 
         <div class="btns">
             <button id="dark" class="btnEl">Dark</button>
-            <button id="Light" class="btnEl">Light</button>
+            <button id="light" class="btnEl">Light</button>
         </div>
     </main>
 
@@ -54,6 +65,22 @@
 
     <script>
 
+        const tela = document.querySelector('.modo-tela');
+        const btnDark = document.querySelector('#dark');
+        const btnLight = document.querySelector('#light');
+        const bgBtn = document.querySelector('.btnEl')
+
+        btnDark.addEventListener('click', addDark);
+        btnLight.addEventListener('click', addLight)
+
+        function addDark() {
+            tela.classList.add('darkMode');
+            tela.classList.remove('lightMode');
+        }
+        function addLight() {
+            tela.classList.add('lightMode');
+            tela.classList.remove('darkMode');
+        }
 
 
     </script>
